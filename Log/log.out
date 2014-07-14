@@ -1,0 +1,40 @@
+field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginSuccess with annotation @org.apache.hadoop.metrics2.annotation.Metric(valueName=Time, value=[Rate of successful kerberos logins and latency (milliseconds)], about=, type=DEFAULT, always=false, sampleName=Ops)
+field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginFailure with annotation @org.apache.hadoop.metrics2.annotation.Metric(valueName=Time, value=[Rate of failed kerberos logins and latency (milliseconds)], about=, type=DEFAULT, always=false, sampleName=Ops)
+field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.getGroups with annotation @org.apache.hadoop.metrics2.annotation.Metric(valueName=Time, value=[GetGroups], about=, type=DEFAULT, always=false, sampleName=Ops)
+UgiMetrics, User and group related metrics
+Kerberos krb5 configuration not found, setting default realm to empty
+ Creating new Groups object
+Trying to load the custom-built native-hadoop library...
+Failed to load native-hadoop with error: java.lang.UnsatisfiedLinkError: no hadoop in java.library.path
+java.library.path=/home/rootavish/Desktop/gdal-1.11.0/swig/java:/usr/local/hadoop/lib 
+Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Falling back to shell based
+Group mapping impl=org.apache.hadoop.security.ShellBasedUnixGroupsMapping
+Failed to detect a valid hadoop home directory
+java.io.IOException: HADOOP_HOME or hadoop.home.dir are not set.
+	at org.apache.hadoop.util.Shell.checkHadoopHome(Shell.java:265)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:290)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:76)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:77)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:240)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:255)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:232)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:718)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:703)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:605)
+	at org.apache.hadoop.fs.FileSystem$Cache$Key.<init>(FileSystem.java:2554)
+	at org.apache.hadoop.fs.FileSystem$Cache$Key.<init>(FileSystem.java:2546)
+	at org.apache.hadoop.fs.FileSystem$Cache.get(FileSystem.java:2412)
+	at org.apache.hadoop.fs.FileSystem.get(FileSystem.java:368)
+	at org.apache.hadoop.fs.FileSystem.get(FileSystem.java:167)
+	at bigsatgps.BigDataHandler.ImageToSequence(BigDataHandler.java:69)
+	at bigsatgps.BigSatGPS.main(BigSatGPS.java:45)
+setsid exited with exit code 0
+Group mapping impl=org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback; cacheTimeout=300000; warningDeltaMs=5000
+hadoop login
+hadoop login commit
+using local user:UnixPrincipal: rootavish
+UGI loginUser:rootavish (auth:SIMPLE)
+Got brand-new compressor [.deflate]
+Got brand-new decompressor [.deflate]
